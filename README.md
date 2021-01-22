@@ -1,8 +1,25 @@
-# Getting Started with Create React App
+# Getting Started with Create React App - basic docker
 
+Start 
+```shell
 docker run -p 3000:3000 -v $(pwd):/app
+```
+
+Start with gitbash from windows and Docker using WSL2
+```shell
 winpty docker run -it -p 3000:3000 -v /app/node_modules -v "/$(PWD)":/app -e CHOKIDAR_USEPOLLING=true 357c00443162f8b9f6b7e060a651eeb1bdcb170230adc99bca51135db915a1ee
+```
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+# Using Docker Compose
+
+```shell
+## DEV
+docker-compose -f Dockerfile.dev up
+
+## Prod
+docker-compose up
+```
 
 ## Available Scripts
 
